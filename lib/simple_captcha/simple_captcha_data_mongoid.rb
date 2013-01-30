@@ -13,7 +13,7 @@ module SimpleCaptcha
       
       def remove_data(key)
         where(:key => key).delete_all
-        clear_old_data(1.hour.ago)
+        clear_old_data(SimpleCaptcha.lifetime)
       end
       
       def clear_old_data(time = 1.hour.ago)

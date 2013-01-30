@@ -50,6 +50,10 @@ module SimpleCaptcha
   mattr_accessor :tmp_path
   @@tmp_path = nil
 
+  # lifetime of record
+  mattr_accessor :lifetime
+  @@lifetime = 1.hour.ago
+
   def self.add_image_style(name, params = [])
     SimpleCaptcha::ImageHelpers.image_styles.update(name.to_s => params)
   end
