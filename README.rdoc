@@ -147,6 +147,9 @@ Create "rails_root/config/initializers/simple_captcha.rb"
     # default: low
     # possible values: 'low', 'medium', 'high', 'random'
     sc.distortion = 'medium'
+
+    # default: 1 hour ago
+    sc.lifetime = 1.hour.ago
   end
 
 You can add your own style:
